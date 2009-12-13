@@ -16,6 +16,7 @@ task :console => :environment do
 end
 
 task :experiment1 => :environment do
+  file = File.open('data/experiment1', 'a')
   count = 0
   matches = 0
   Corpus.all.each do |word|
@@ -23,12 +24,15 @@ task :experiment1 => :environment do
       count += 1
       jp_word = t(word.word)
       dissection = Katakana.dissect(jp_word)
-      puts "#{word.word} - #{dissection.join} - #{dissection.join(' ')}"
+      text = "#{word.word} - #{dissection.join} - #{dissection.join(' ')}"
+      puts text
+      file.puts text
       matches += 1
     rescue
     end
     puts "Total words: #{count} / Total matches: #{matches} / Ratio: #{matches / count.to_f}"
   end
+  file.puts "Total words: #{count} / Total matches: #{matches} / Ratio: #{matches / count.to_f}" 
 end
 
 task :environment do
