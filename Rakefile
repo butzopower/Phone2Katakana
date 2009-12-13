@@ -15,6 +15,22 @@ task :console => :environment do
   puts "kinda like console"
 end
 
+task :experiment1 => :environment do
+  count = 0
+  matches = 0
+  Corpus.all.each do |word|
+    begin
+      count += 1
+      jp_word = t(word.word)
+      dissection = Katakana.dissect(jp_word)
+      puts "#{word.word} - #{dissection.join} - #{dissection.join(' ')}"
+      matches += 1
+    rescue
+    end
+    puts "Total words: #{count} / Total matches: #{matches} / Ratio: #{matches / count.to_f}"
+  end
+end
+
 task :environment do
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
   ActiveRecord::Base.logger = Logger.new(File.open('logs/database.log', 'a'))

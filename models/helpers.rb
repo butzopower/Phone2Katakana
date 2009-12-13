@@ -1,6 +1,6 @@
 module Helpers
   def translate(word)
-    Translate.t(word, "ENGLISH", "JAPANESE")
+    Translate.t(word.upcase, "ENGLISH", "JAPANESE")
   end
   
   alias t translate
