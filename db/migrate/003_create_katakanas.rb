@@ -2,7 +2,7 @@ class CreateKatakanas < ActiveRecord::Migration
   def self.up
     transaction do
       create_table :katakanas do |t|
-        t.column :characters, :string, :null => false
+        t.column :phone, :string, :null => false
       end
     end
   end
