@@ -1,4 +1,5 @@
 class Katakana < ActiveRecord::Base
+  # need to reverse, otherwise we'll match non-combinations first
   CHARACTERS = %w(ア イ ウ エ オ 
                   カ キ ク ケ コ 
                   サ シ ス セ ソ 
@@ -24,5 +25,21 @@ class Katakana < ActiveRecord::Base
                   ギャ ギュ ギョ 
                   ジャ ジュ ジョ 
                   ビャ ビュ ビョ 
-                  ピャ ピュ ピョ)
+                  ピャ ピュ ピョ).reverse
+  LONG = 'ー'
+  DOUBLE = 'ッ'
+
+  PHONES = CHARACTERS.map{|x| "#{DOUBLE + x}"} | CHARACTERS.map{|x| "#{x + LONG}"} | CHARACTERS
+
+  # dissect a katakana string into it's parts
+  def self.dissect(word)
+    return [] if word.blank?
+    PHONES.each do |char|
+      if (word =~ /#{char}/) == 0
+        rest = word.sub(char, '')
+        return [char, self.dissect(rest)].flatten
+      end
+    end
+    raise 'Word is not katakana'
+  end
 end

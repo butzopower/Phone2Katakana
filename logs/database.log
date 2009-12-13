@@ -486,3 +486,1512 @@ Migrating to ImportKatakanas (4)
   [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワ')[0m
   [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
   [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mKatakana Delete all (0.3ms)[0m   [0mDELETE FROM "katakanas" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '4'[0m
+Migrating to CreateKatakanas (3)
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "katakanas"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '3'[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Delete all (0.2ms)[0m   [0mDELETE FROM "phonemes" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '2'[0m
+Migrating to CreatePhonemes (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "phonemes"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '1'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhonemes (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "phonemes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Create (0.3ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('B')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('CH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('D')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('DH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('F')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('G')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('HH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('JH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('K')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('L')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('M')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('N')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('NG')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('P')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('R')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('S')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('SH')[0m
+  [4;36;1mPhoneme Create (0.2ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('T')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('TH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('V')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('W')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('Y')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('Z')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ZH')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateKatakanas (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "katakanas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "characters" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ア')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('イ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ク')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('タ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ト')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ガ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('グ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゲ')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゴ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ザ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ズ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゼ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゾ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ダ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('デ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ド')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('バ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ブ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ベ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ボ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('パ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('プ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ペ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ポ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ショ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピョ')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhonemes (1)
+Migrating to ImportPhonemes (2)
+Migrating to CreateKatakanas (3)
+Migrating to ImportKatakanas (4)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mKatakana Delete all (0.5ms)[0m   [0mDELETE FROM "katakanas" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '4'[0m
+Migrating to CreateKatakanas (3)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "katakanas"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '3'[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Delete all (0.2ms)[0m   [0mDELETE FROM "phonemes" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '2'[0m
+Migrating to CreatePhonemes (1)
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "phonemes"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '1'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhonemes (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "phonemes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Create (0.2ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('B')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('CH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('D')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('DH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('F')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('G')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('HH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('JH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('K')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('L')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('M')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('N')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('NG')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('P')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('R')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('S')[0m
+  [4;35;1mPhoneme Create (0.2ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('SH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('T')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('TH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('V')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('W')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('Y')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('Z')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ZH')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateKatakanas (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "katakanas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "characters" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッア')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッイ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッエ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッオ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッカ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ック')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッコ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッサ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッセ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッタ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッテ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ット')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッフ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッマ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッメ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッモ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッレ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッガ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッグ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゲ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゴ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッザ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッズ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゼ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゾ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッダ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッデ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッド')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッバ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッブ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッベ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッボ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッパ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ップ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッペ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッポ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッキャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッキョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッシャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッショ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッチャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッチョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッニャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッニョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヒャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヒョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッミャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッミョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッリュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリョ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッビュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッピュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('アー')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('イー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('クー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('スー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ター')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('トー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ムー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ルー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ガー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('グー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゲー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゴー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ザー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ズー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゼー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゾー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ダー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('デー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ドー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('バー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ブー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ベー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ボー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('パー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('プー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ペー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ポー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ショー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ア')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('イ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ク')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シ')[0m
+  [4;36;1mKatakana Create (0.3ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('タ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ト')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ガ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('グ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゲ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゴ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ザ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ズ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゼ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゾ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ダ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('デ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ド')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('バ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ブ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ベ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ボ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('パ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('プ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ペ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ポ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ショ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピョ')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to CreateIntersections (5)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mKatakana Delete all (0.6ms)[0m   [0mDELETE FROM "katakanas" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '4'[0m
+Migrating to CreateKatakanas (3)
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "katakanas"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '3'[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Delete all (0.3ms)[0m   [0mDELETE FROM "phonemes" WHERE 1=1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '2'[0m
+Migrating to CreatePhonemes (1)
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "phonemes"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '1'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhonemes (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "phonemes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Create (0.3ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO1')[0m
+  [4;36;1mPhoneme Create (0.2ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('B')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('CH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('D')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('DH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('F')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('G')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('HH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('JH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('K')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('L')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('M')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('N')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('NG')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('P')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('R')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('S')[0m
+  [4;35;1mPhoneme Create (0.2ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('SH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('T')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('TH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('V')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('W')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('Y')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('Z')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ZH')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateKatakanas (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "katakanas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "characters" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッア')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッイ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッエ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッオ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッカ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ック')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッコ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッサ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッセ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッタ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッテ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ット')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッフ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッマ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッメ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッモ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッレ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッガ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッグ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゲ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゴ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッザ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッズ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゼ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゾ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッダ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッデ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッド')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッバ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッブ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッベ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッボ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッパ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ップ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッペ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッポ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッキャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッキョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッシャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッショ')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッチャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチュ')[0m
+  [4;35;1mKatakana Create (0.3ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッチョ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッニャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッニョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヒャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヒョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッミャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッミョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッリュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッビュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッピュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('アー')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('イー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('クー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('スー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ター')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('トー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ムー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ルー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ガー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('グー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゲー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゴー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ザー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ズー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゼー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゾー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ダー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('デー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ドー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('バー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ブー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ベー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ボー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('パー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('プー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ペー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ポー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ショー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ア')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('イ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キ')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ク')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('タ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ト')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ガ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('グ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゲ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゴ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ザ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ズ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゼ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゾ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ダ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('デ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ド')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('バ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ブ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ベ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ボ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('パ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('プ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ペ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ポ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ショ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピョ')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to CreateIntersections (5)
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('5')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateIntersections (5)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '5'[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mKatakana Delete all (0.4ms)[0m   [0;1mDELETE FROM "katakanas" WHERE 1=1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '4'[0m
+Migrating to CreateKatakanas (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "katakanas"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '3'[0m
+Migrating to ImportPhonemes (2)
+  [4;36;1mPhoneme Delete all (0.3ms)[0m   [0;1mDELETE FROM "phonemes" WHERE 1=1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '2'[0m
+Migrating to CreatePhonemes (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "phonemes"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '1'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhonemes (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "phonemes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to ImportPhonemes (2)
+  [4;35;1mPhoneme Create (0.3ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AA1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AA2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AE1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AE2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AO1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AO2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AW1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AW2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY')[0m
+  [4;36;1mPhoneme Create (0.2ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('AY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('AY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('B')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('CH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('D')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('DH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EH1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EH2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('ER1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ER2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY0')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('EY1')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('EY2')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('F')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('G')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('HH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('IY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('IY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('JH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('K')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('L')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('M')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('N')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('NG')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('OY1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('OY2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('P')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('R')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('S')[0m
+  [4;35;1mPhoneme Create (0.2ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('SH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('T')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('TH')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UH1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UH2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW0')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('UW1')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('UW2')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('V')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('W')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('Y')[0m
+  [4;35;1mPhoneme Create (0.1ms)[0m   [0mINSERT INTO "phonemes" ("phone") VALUES('Z')[0m
+  [4;36;1mPhoneme Create (0.1ms)[0m   [0;1mINSERT INTO "phonemes" ("phone") VALUES('ZH')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateKatakanas (3)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "katakanas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "characters" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to ImportKatakanas (4)
+  [4;36;1mKatakana Create (0.3ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッピョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッピュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッピャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッビョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッビュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッビャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッジャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッギャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッリョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッリャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッミュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヒュ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッニュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッチュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッショ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッシュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッキュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッポ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッペ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ップ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッピ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッパ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッボ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッベ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッブ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッビ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッバ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッド')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッデ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッダ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゾ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゼ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッズ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッジ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッザ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッゴ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッゲ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッグ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッギ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッガ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッレ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッリ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッモ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッメ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッマ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッフ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヒ')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッハ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッネ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッニ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ット')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッテ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッチ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッタ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッセ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッシ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッサ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッコ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ック')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッキ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッカ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッオ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッエ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ッイ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ッア')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピョー')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニョー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニュー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ショー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シュー')[0m
+  [4;35;1mKatakana Create (0.2ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シャー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キョー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キュー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キャー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ポー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ペー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('プー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('パー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ボー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ベー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ブー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('バー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ドー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('デー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ダー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゾー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゼー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ズー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ザー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゴー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゲー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('グー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ガー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ルー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ムー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('トー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ター')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('スー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('クー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('イー')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('アー')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ピュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ビュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ジャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ギャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('リャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミョ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ミュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヒュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニョ')[0m
+  [4;36;1mKatakana Create (0.2ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ニュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('チュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ショ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('シュ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シャ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キョ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('キュ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キャ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ポ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ペ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('プ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ピ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('パ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ボ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ベ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ブ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ビ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('バ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ド')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('デ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ダ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゾ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゼ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ズ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ジ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ザ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ゴ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ゲ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('グ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ギ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ガ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ウ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ワ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ロ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('レ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ル')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('リ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ラ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヨ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ユ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ヤ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('モ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('メ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ム')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ミ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('マ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ホ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヘ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('フ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヒ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ハ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ノ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ネ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ヌ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ニ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ナ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ト')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('テ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ツ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('チ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('タ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ソ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('セ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ス')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('シ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('サ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('コ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('ケ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ク')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('キ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('カ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('オ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('エ')[0m
+  [4;36;1mKatakana Create (0.1ms)[0m   [0;1mINSERT INTO "katakanas" ("characters") VALUES('イ')[0m
+  [4;35;1mKatakana Create (0.1ms)[0m   [0mINSERT INTO "katakanas" ("characters") VALUES('ア')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+Migrating to CreateIntersections (5)
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('5')[0m

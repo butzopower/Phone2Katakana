@@ -2,7 +2,7 @@ class ImportKatakanas < ActiveRecord::Migration
   def self.up
     transaction do
       
-      Katakana::CHARACTERS.each do |katakana|
+      Katakana::PHONES.each do |katakana|
         Katakana.create(:characters => katakana)
       end
 
