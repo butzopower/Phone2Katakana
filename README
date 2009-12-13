@@ -1,0 +1,12 @@
+
+============
+REQUIREMENTS
+============
+
+This project requires a few gems:
+  * rake
+  * active_record (2.3.5)
+  * sishen-rtranslate (1.2)
+  * rdebug
+
+  install any with: sudo gem install
