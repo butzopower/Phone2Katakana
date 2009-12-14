@@ -13,6 +13,7 @@ class ImportCorpus < ActiveRecord::Migration
   end
 
   def self.down
+    Corpus.delete_all
   end
 
 end
