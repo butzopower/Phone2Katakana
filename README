@@ -1,3 +1,7 @@
+================
+Phone 2 Katakana
+Brian Butz
+================
 
 ============
 REQUIREMENTS
@@ -10,3 +14,55 @@ This project requires a few gems:
   * rdebug
 
   install any with: sudo gem install
+  (might need to add github as a gem source with:
+  	gem sources -a http://gems.github.com )
+
+=====
+USAGE
+=====
+
+Everything is run via rake tasks that can be found in Rakefile.
+
+To initialize the database you'll want to run the following:
+	
+	rake migrate 			(might take up to 10 or so minutes)
+	rake train TIMES=10000 	  (again, another 10 or so minutes)
+	rake guess								  (and you are in!)
+
+=====
+TASKS
+=====
+
+	* migrate : Will migrate the database and import any
+				corpus data, which ends up taking a bit of time
+
+				Takes VERSION= option if you want to set the version
+
+	* train	: This will train the data by creating intersections
+			  using random words from the katakana corpus
+
+			  Will need to run this for anything interesting to
+			  happen
+
+			  Takes TIMES= that defaults to 1000 (initially you'll
+			  want 5k to 10k)
+
+	* console : Using rdebug and the fact that environment loads
+			    everything, this is sort of like a Rails console
+			    for manipulating models and viewing the data
+
+	* experiment1 : This experiment used the google translate gem
+					and the CMU corpus to generate a corpus of
+					all katakana words based on that corpus
+
+					This will run for a few hours (though could
+					most likely be opitmized to hit google only
+					once instead of 140k times)
+
+					It is not neccessary to run this
+
+	* guess : If this project has a "main" here it is
+			  This lets you enter a word and get back it's
+			  phonetic structure, the raw and phonetic katakana
+			  if it exists, and the raw and phonetic katakana
+			  that the program guesses
