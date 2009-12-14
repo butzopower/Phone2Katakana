@@ -2,16 +2,18 @@ class Intersection < ActiveRecord::Base
   belongs_to :phoneme
   belongs_to :katakana
 
+  # this looks at the edges, and doesn't add anything that isn't at the edges
+  # need a good way to get everything between that is also fast
   def self.map(phonemes, katakanas)
     if phonemes.size > katakanas.size
       0.upto(katakanas.size - 1) do |index|
-        front = phonemes[(index * phonemes.size) / katakanas.size]
-        back = phonemes[(((index + 1) * phonemes.size) -1) / katakanas.size]
-        if front == back
-          find_or_create_intersection(front, katakanas[index])
-        else
-          find_or_create_intersection(front, katakanas[index])
-          find_or_create_intersection(back, katakanas[index])
+        intersections = [phonemes[(index * phonemes.size) / katakanas.size]]
+        # trying this as a means to get non edge intersections
+        1.upto(3) do |x| 
+          intersections << phonemes[(((index + x/3.0) * phonemes.size) -1) / katakanas.size]
+        end
+        intersections.uniq.each do |intersection|
+          find_or_create_intersection(intersection, katakanas[index])
         end
       end
     end

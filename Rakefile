@@ -35,6 +35,13 @@ task :experiment1 => :environment do
   file.puts "Total words: #{count} / Total matches: #{matches} / Ratio: #{matches / count.to_f}" 
 end
 
+task :experiment2 => :environment do
+  ap = Phoneme.find_by_phone("AH0") 
+  bp = Phoneme.find_by_phone("B")
+  matches = Katakana.find_a_match([ap, bp])
+  puts matches
+end
+
 task :environment do
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
   ActiveRecord::Base.logger = Logger.new(File.open('logs/database.log', 'a'))

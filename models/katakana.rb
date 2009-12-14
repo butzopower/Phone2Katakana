@@ -64,7 +64,88 @@ class Katakana < ActiveRecord::Base
     end
     raise 'Word is not katakana'
   end
+
+  def self.find_matches(phonemes)
+    groups = []
+    results = []
+    [*phonemes].each do |phoneme|
+      groups << phoneme.intersections.map {|x| [x.katakana.phone, phoneme.probability(x.katakana)] }
+    end
+    
+    if groups.size == 1
+      results = groups[0]
+    else
+      groups[0].each do |x|
+        begin
+          prob = x[1]
+          groups[1..-1].each do |y|
+            pair = y.find{|z| z[0] == x[0]}
+            raise if pair.nil?
+            prob *= pair[1]   
+          end
+          results << [x[0], prob]
+        rescue 
+          # do nothing
+        end
+      end
+    end
+       
+    return results.sort_by{|x| x[1]}.last(5).map{|x| x[0]}
+  end
+
+  def self.guess(word)
+    phoneme = Corpus.find_by_word(word).phonemes
+    phonemes = Phoneme.dissect(phoneme)
+    result = []
+    while !phonemes.empty?
+      if phonemes.size >= 3
+        current = phonemes.first(3).map{|x| Phoneme.find_by_phone(x)}
+        first = find_matches(current[0])
+        last = find_matches(current[2]) 
+        first_group = find_matches([current[0], current[1]])
+        last_group = find_matches([current[1], current[2]])
+        three_match = (first & last_group) & (last & first_group)
+        unless three_match.empty?
+          result << three_match[0] 
+          phonemes = phonemes.last(phonemes.size - 3)
+        else
+          all_three = find_matches([current[0], current[1], current[2]])
+          two_match = first & all_three
+          unless two_match.empty?
+            result << two_match[0]
+            phonemes = phonemes.last(phonemes.size - 2)
+          else
+            other_two_match = first & first_group
+            unless other_two_match.empty?
+              result << other_two_match[0]
+              phonemes = phonemes.last(phonemes.size - 2)
+            else
+              result << first[0]
+              phonemes = phonemes.last(phonemes.size - 1)
+            end
+          end
+        end
+      elsif phonemes.size >= 2
+        current = phonemes.first(2).map{|x| Phoneme.find_by_phone(x)}
+        first = find_matches(current[0])
+        first_group = find_matches([current[0], current[1]])
+        two_match = first & first_group
+        unless two_match.empty?
+          result << two_match[0]
+          phonemes = phonemes.last(phonemes.size - 2)
+        else
+          result << first[0]
+          phonemes = phonemes.last(phonemes.size - 1)
+        end
+      elsif phonemes.size == 1
+        result << find_matches(Phoneme.find_by_phone(phonemes[0])).last
+        phonemes = []
+      end
+    end
+    result
+  end
   
   has_many :intersections
   has_many :phonemes, :through => :intersections
+
 end
