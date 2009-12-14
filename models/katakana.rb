@@ -113,7 +113,8 @@ class Katakana < ActiveRecord::Base
           'ピ' => 'PI', 
           'プ' => 'PU', 
           'ペ' => 'PE', 
-          'ポ' => 'PO'}
+          'ポ' => 'PO',
+          'ン' => 'N'}
   LONG = 'ー'
   DOUBLE = 'ッ'
   # japanese n sound is special, since it has no vowel and suppliments other characters
@@ -133,11 +134,37 @@ class Katakana < ActiveRecord::Base
     raise 'Word is not katakana'
   end
 
+  def self.print_sounds(word)
+    dissect(word).map do |x|
+      if x =~ /#{LONG}/
+        sound = SOUNDS[x.gsub(LONG, '')]
+        sound = sound ? sound + sound.match(/.$/).to_s : '?'
+      elsif  x=~ /#{DOUBLE}/
+        sound = SOUNDS[x.gsub(DOUBLE, '')]
+        sound = sound ? sound.match(/^./).to_s + sound : '?'
+      else
+        if SOUNDS[x].nil?
+          s = SOUNDS[SOUNDS.keys.find{|y| x.include?(y)}]
+          sound = s.nil? ? '?' : "#{s}?"
+        else
+          sound = SOUNDS[x]
+        end
+      end
+      sound
+    end.join(' ')
+  end
+
+  def probability(phoneme)
+    intersection = intersections.first(:conditions => {:phoneme_id => phoneme.id})
+    return 0 if intersection.nil?
+    intersection.times_matched.to_f / intersections.sum(:times_matched)
+  end
+
   def self.find_matches(phonemes)
     groups = []
     results = []
     [*phonemes].each do |phoneme|
-      groups << phoneme.intersections.map {|x| [x.katakana.phone, phoneme.probability(x.katakana)] }
+      groups << phoneme.intersections.map {|x| [x.katakana.phone, (phoneme.probability(x.katakana) * x.katakana.probability(phoneme))] }
     end
     
     if groups.size == 1
@@ -210,7 +237,7 @@ class Katakana < ActiveRecord::Base
         phonemes = []
       end
     end
-    result
+    result.join
   end
   
   has_many :intersections

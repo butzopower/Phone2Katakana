@@ -2,6 +2,7 @@ require 'active_record'
 require 'yaml'
 require 'ruby-debug'
 require 'rtranslate'
+require 'readline'
 
 task :default => :migrate
 
@@ -40,6 +41,43 @@ task :experiment2 => :environment do
   bp = Phoneme.find_by_phone("B")
   matches = Katakana.find_a_match([ap, bp])
   puts matches
+end
+
+task :guess => :environment do 
+  
+  while line = Readline.readline('Enter the word to guess > ', true)
+    exit if line == 'quit' || line == 'exit' || line == 'q'
+    word = Corpus.find_by_word(line.upcase)
+    if word.nil?
+      puts "Word doesn't exist in Corpus"
+    else
+      katakana = word.japanese_corpus
+      guess = Katakana.guess(line.upcase)
+      puts "== #{line} =="
+      puts "== PHONETIC : #{word.phonemes}"
+      if katakana.nil?
+        puts "== ACTUAL KATAKANA : Word has no real katakana equivalent"
+      else
+        puts "== ACTUAL KATAKANA : #{katakana.word}"
+        puts "== ACTUAL PRONOUNCIATION : #{Katakana.print_sounds(katakana.word)}"
+        Intersection.map(Phoneme.dissect(word.phonemes), Katakana.dissect(katakana.word))
+      end
+      puts "== GUESSED KATAKANA : #{guess}"
+      puts "== GUESSED PRONOUNCIATION : #{Katakana.print_sounds(guess)}"
+    end
+  end
+
+end
+
+task :train => :environment do
+  times = ENV['TIMES'].to_i || 1000
+  words = []
+  times.times do
+    word = JapaneseCorpus.find((rand * (JapaneseCorpus.count + 1)).to_i)
+    Intersection.map(Phoneme.dissect(word.corpus.phonemes), Katakana.dissect(word.word))
+    words << word.corpus.word
+  end
+  puts "Trained with #{words.uniq.sort.join(', ')}"
 end
 
 task :environment do
