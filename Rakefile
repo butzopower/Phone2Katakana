@@ -1,7 +1,7 @@
+require 'rubygems'
 require 'active_record'
 require 'yaml'
 require 'ruby-debug'
-require 'rtranslate'
 require 'readline'
 
 task :default => :migrate
