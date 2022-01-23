@@ -1,3 +1,4 @@
+require 'rake/testtask'
 require 'active_record'
 require 'yaml'
 require 'readline'
@@ -98,6 +99,11 @@ task :train => :environment do
 
   puts "Trained with #{words.uniq.sort.join(', ')}"
 end
+
+Rake::TestTask.new do |t|
+  t.test_files = FileList['spec/**/*_spec.rb']
+end
+desc "Run tests"
 
 task :environment do
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
