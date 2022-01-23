@@ -6,16 +6,22 @@ class Intersection < ActiveRecord::Base
   # need a good way to get everything between that is also fast
   def self.map(phonemes, katakanas)
     if phonemes.size > katakanas.size
-      0.upto(katakanas.size - 1) do |index|
-        intersections = [phonemes[(index * phonemes.size) / katakanas.size]]
-        # trying this as a means to get non edge intersections
-        1.upto(3) do |x| 
-          intersections << phonemes[(((index + x/3.0) * phonemes.size) -1) / katakanas.size]
-        end
-        intersections.uniq.each do |intersection|
-          find_or_create_intersection(intersection, katakanas[index])
+      map_intersections_before_save(phonemes, katakanas).each do |set|
+        set[:intersections].each do |intersection|
+          find_or_create_intersection(intersection, set[:kana])
         end
       end
+    end
+  end
+
+  def self.map_intersections_before_save(phonemes, katakanas)
+    0.upto(katakanas.size - 1).map do |index|
+      intersections = [phonemes[(index * phonemes.size) / katakanas.size]]
+      # trying this as a means to get non edge intersections
+      1.upto(3) do |x|
+        intersections << phonemes[(((index + x/3.0) * phonemes.size) -1) / katakanas.size]
+      end
+      { kana: katakanas[index], intersections: intersections.uniq}
     end
   end
 
