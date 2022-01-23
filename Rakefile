@@ -1,12 +1,16 @@
 require 'active_record'
 require 'yaml'
 require 'readline'
+require_relative 'db/import'
 
 task :default => :migrate
 
 desc "Migrate the database through scripts in db/migrate. Target specific version with VERSION=x"
 task :migrate => :environment do
   ActiveRecord::MigrationContext.new(["db/migrate/"], ActiveRecord::Base.connection.schema_migration).migrate
+
+  Import.import_english_corpus
+  Import.import_japanese_corpus
 end
 
 task :console => :environment do
