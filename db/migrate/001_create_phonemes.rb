@@ -1,4 +1,4 @@
-class CreatePhonemes < ActiveRecord::Migration
+class CreatePhonemes < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       create_table :phonemes do |t|

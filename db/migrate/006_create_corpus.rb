@@ -1,7 +1,7 @@
-class CreateCorpus < ActiveRecord::Migration
+class CreateCorpus < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
-      create_table :corpus, :id => nil do |t|
+      create_table :corpus do |t|
         t.column :word, :string
         t.column :phonemes, :string
       end

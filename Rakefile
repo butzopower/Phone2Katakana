@@ -6,7 +6,7 @@ task :default => :migrate
 
 desc "Migrate the database through scripts in db/migrate. Target specific version with VERSION=x"
 task :migrate => :environment do
-  ActiveRecord::Migrator.migrate('db/migrate', ENV["VERSION"] ? ENV["VERSION"].to_i : nil )
+  ActiveRecord::MigrationContext.new(["db/migrate/"], ActiveRecord::Base.connection.schema_migration).migrate
 end
 
 task :console => :environment do
@@ -70,8 +70,9 @@ end
 task :train => :environment do
   times = ENV['TIMES'].to_i || 1000
   words = []
+  japanese_corpus_ids = (1..JapaneseCorpus.count).to_a
   times.times do
-    word = JapaneseCorpus.find((rand * (JapaneseCorpus.count + 1)).to_i)
+    word = JapaneseCorpus.find(japanese_corpus_ids.sample)
     phonemes = Phoneme.dissect(word.corpus.phonemes)
     kanas = Katakana.dissect(word.word)
 

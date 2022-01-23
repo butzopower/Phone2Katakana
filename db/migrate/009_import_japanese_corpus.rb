@@ -1,11 +1,11 @@
-class ImportJapaneseCorpus < ActiveRecord::Migration
+class ImportJapaneseCorpus < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       File.open('lib/experiment1').each do |line|
         line =~ /^(\w+) - (.+?) - (.+)/
         unless $1.nil? or $2.nil?
-          word = Corpus.find_by_word($1)
-          JapaneseCorpus.create(:corpus => word, :word => $2)
+          corpus = Corpus.find_by_word($1)
+          JapaneseCorpus.create(corpus: corpus, word: $2)
         end
       end
     end

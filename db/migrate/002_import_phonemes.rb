@@ -1,4 +1,4 @@
-class ImportPhonemes < ActiveRecord::Migration
+class ImportPhonemes < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       File.open('lib/cmudict.0.7a.phones').read.split("\n").each do |phone|

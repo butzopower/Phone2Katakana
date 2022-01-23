@@ -1,4 +1,4 @@
-class CreateKatakanas < ActiveRecord::Migration
+class CreateKatakanas < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       create_table :katakanas do |t|

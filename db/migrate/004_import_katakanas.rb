@@ -1,4 +1,4 @@
-class ImportKatakanas < ActiveRecord::Migration
+class ImportKatakanas < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       

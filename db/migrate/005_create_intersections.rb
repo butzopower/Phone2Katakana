@@ -1,4 +1,4 @@
-class CreateIntersections < ActiveRecord::Migration
+class CreateIntersections < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       create_table :intersections do |t|

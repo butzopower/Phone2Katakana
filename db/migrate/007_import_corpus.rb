@@ -1,4 +1,4 @@
-class ImportCorpus < ActiveRecord::Migration
+class ImportCorpus < ActiveRecord::Migration[6.1]
   def self.up
     transaction do
       File.open('lib/cmudict.0.7a').each do |line|
