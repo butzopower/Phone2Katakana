@@ -1,3 +1,5 @@
+require 'active_record'
+
 class Katakana < ActiveRecord::Base
   # need to reverse, otherwise we'll match non-combinations first
   CHARACTERS = %w(ア イ ウ エ オ 
@@ -114,13 +116,19 @@ class Katakana < ActiveRecord::Base
           'プ' => 'PU', 
           'ペ' => 'PE', 
           'ポ' => 'PO',
-          'ン' => 'N'}
+          'ン' => 'N',
+          'ャ' => 'YA',
+          'ュ' => 'YU',
+          'ョ' => 'YO'
+  }
   LONG = 'ー'
   DOUBLE = 'ッ'
   # japanese n sound is special, since it has no vowel and suppliments other characters
   N = 'ン'
 
   PHONES = CHARACTERS.map{|x| "#{DOUBLE + x}"} | CHARACTERS.map{|x| "#{x + LONG}"} | CHARACTERS | [N]
+
+  SMALL_KANA = %w(ャ ュ ョ)
 
   # dissect a katakana string into it's parts
   def self.dissect(word)
@@ -139,9 +147,14 @@ class Katakana < ActiveRecord::Base
       if x =~ /#{LONG}/
         sound = SOUNDS[x.gsub(LONG, '')]
         sound = sound ? sound + sound.match(/.$/).to_s : '?'
-      elsif  x=~ /#{DOUBLE}/
+      elsif x=~ /#{DOUBLE}/
         sound = SOUNDS[x.gsub(DOUBLE, '')]
         sound = sound ? sound.match(/^./).to_s + sound : '?'
+      elsif SMALL_KANA.any? { |small| x=~ /#{small}/}
+        start, small = x.split ''
+        start_without_vowel = SOUNDS.has_key?(start) ? SOUNDS[start][0..-2] : '?'
+        small_sound = SOUNDS[small] || '?'
+        sound = "#{start_without_vowel}#{small_sound}"
       else
         if SOUNDS[x].nil?
           s = SOUNDS[SOUNDS.keys.find{|y| x.include?(y)}]
