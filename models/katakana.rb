@@ -155,7 +155,7 @@ class Katakana < ActiveRecord::Base
   end
 
   def probability(phoneme)
-    intersection = intersections.first(:conditions => {:phoneme_id => phoneme.id})
+    intersection = intersections.where({:phoneme_id => phoneme.id}).first
     return 0 if intersection.nil?
     intersection.times_matched.to_f / intersections.sum(:times_matched)
   end

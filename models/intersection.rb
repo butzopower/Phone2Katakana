@@ -22,12 +22,8 @@ class Intersection < ActiveRecord::Base
   def self.find_or_create_intersection(phone, katakana)
     p = Phoneme.find_by_phone(phone)
     k = Katakana.find_by_phone(katakana)
-    i = find(:first, :conditions => {:phoneme_id => p.id, :katakana_id => k.id})
-    if i.nil?
-      create(:phoneme_id => p.id, :katakana_id => k.id, :times_matched => 1)
-    else
-      i.times_matched += 1
-      i.save
-    end
+    i = find_or_initialize_by(phoneme_id: p.id, katakana_id: k.id)
+    i.times_matched = (i.times_matched || 0 ) + 1
+    i.save
   end
 end

@@ -1,3 +1,6 @@
 *.swp
-logs/*.log
+logs
 *.sqlite
+.idea
+.bundle
+vendor

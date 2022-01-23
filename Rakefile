@@ -1,7 +1,5 @@
-require 'rubygems'
 require 'active_record'
 require 'yaml'
-require 'ruby-debug'
 require 'readline'
 
 task :default => :migrate
@@ -12,8 +10,8 @@ task :migrate => :environment do
 end
 
 task :console => :environment do
-  debugger
-  puts "kinda like console"
+  # debugger
+  # puts "kinda like console"
 end
 
 task :experiment1 => :environment do
@@ -74,7 +72,10 @@ task :train => :environment do
   words = []
   times.times do
     word = JapaneseCorpus.find((rand * (JapaneseCorpus.count + 1)).to_i)
-    Intersection.map(Phoneme.dissect(word.corpus.phonemes), Katakana.dissect(word.word))
+    phonemes = Phoneme.dissect(word.corpus.phonemes)
+    kanas = Katakana.dissect(word.word)
+
+    Intersection.map(phonemes, kanas)
     words << word.corpus.word
   end
   puts "Trained with #{words.uniq.sort.join(', ')}"

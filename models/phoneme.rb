@@ -7,7 +7,7 @@ class Phoneme < ActiveRecord::Base
   end
   
   def probability(katakana) 
-    intersection = intersections.first(:conditions => {:katakana_id => katakana.id})
+    intersection = intersections.where(katakana_id: katakana.id).first
     return 0 if intersection.nil?
     prob = intersection.times_matched.to_f / intersections.sum(:times_matched)
     # need to make this hueristic, since N comes up a lot when it shouldn't
