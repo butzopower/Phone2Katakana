@@ -72,17 +72,26 @@ task :guess => :environment do
 end
 
 task :train => :environment do
+  include WithProgressTracker
+
   times = ENV['TIMES'].to_i || 1000
   words = []
-  japanese_corpus_ids = (1..JapaneseCorpus.count).to_a
-  times.times do
-    word = JapaneseCorpus.find(japanese_corpus_ids.sample)
-    phonemes = Phoneme.dissect(word.corpus.phonemes)
-    kanas = Katakana.dissect(word.word)
+  all_japanese_corpus_ids = (1..JapaneseCorpus.count).to_a
+  ids_to_train_on = all_japanese_corpus_ids.sample(times)
+  japanese_words = JapaneseCorpus.where(id: ids_to_train_on)
 
-    Intersection.map(phonemes, kanas)
-    words << word.corpus.word
+  puts "Found words to train on"
+
+  with_progress_tracker(japanese_words) do |batch|
+    batch.each do |word|
+      phonemes = Phoneme.dissect(word.corpus.phonemes)
+      kanas = Katakana.dissect(word.word)
+
+      Intersection.map(phonemes, kanas)
+      words << word.corpus.word
+    end
   end
+
   puts "Trained with #{words.uniq.sort.join(', ')}"
 end
 
