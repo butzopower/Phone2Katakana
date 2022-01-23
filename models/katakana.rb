@@ -170,16 +170,18 @@ class Katakana < ActiveRecord::Base
   end
 
   def probability(phoneme)
-    intersection = intersections.where({:phoneme_id => phoneme.id}).first
+    intersection = intersections.find {|i| i.phoneme_id == phoneme.id }
     return 0 if intersection.nil?
-    intersection.times_matched.to_f / intersections.sum(:times_matched)
+    intersection.times_matched.to_f / intersections.to_a.map(&:times_matched).sum
   end
 
   def self.find_matches(phonemes)
     groups = []
     results = []
     [*phonemes].each do |phoneme|
-      groups << phoneme.intersections.map {|x| [x.katakana.phone, (phoneme.probability(x.katakana) * x.katakana.probability(phoneme))] }
+      groups << phoneme.intersections
+                       .includes(katakana: :intersections, phoneme: :intersections)
+                       .map {|x| [x.katakana.phone, (phoneme.probability(x.katakana) * x.katakana.probability(phoneme))] }
     end
     
     if groups.size == 1

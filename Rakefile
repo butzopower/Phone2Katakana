@@ -45,8 +45,7 @@ task :experiment2 => :environment do
   puts matches
 end
 
-task :guess => :environment do 
-  
+task :guess => :environment do
   while line = Readline.readline('Enter the word to guess > ', true)
     exit if line == 'quit' || line == 'exit' || line == 'q'
     word = Corpus.find_by_word(line.upcase)
@@ -104,4 +103,8 @@ task :environment do
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
   ActiveRecord::Base.logger = Logger.new(File.open('logs/database.log', 'a'))
   Dir.glob(File.join(File.dirname(__FILE__), '/models/*.rb')).each {|f| require f }
+
+  if (ENV['LOG_SQL'] || 'false') == 'true'
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+  end
 end
