@@ -1,6 +1,8 @@
 require 'active_record'
 
 class Katakana < ActiveRecord::Base
+  @cache = {}
+
   # need to reverse, otherwise we'll match non-combinations first
   CHARACTERS = %w(ア イ ウ エ オ 
                   カ キ ク ケ コ 
@@ -256,4 +258,8 @@ class Katakana < ActiveRecord::Base
   has_many :intersections
   has_many :phonemes, :through => :intersections
 
+  def self.find_by_phone_cached(phone)
+    @cache[phone] ||= find_by_phone(phone)
+    @cache[phone]
+  end
 end

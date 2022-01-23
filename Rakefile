@@ -76,9 +76,14 @@ task :train => :environment do
 
   times = ENV['TIMES'].to_i || 1000
   words = []
+
+  puts "Searching for #{times} words"
+
   all_japanese_corpus_ids = (1..JapaneseCorpus.count).to_a
   ids_to_train_on = all_japanese_corpus_ids.sample(times)
-  japanese_words = JapaneseCorpus.where(id: ids_to_train_on)
+  japanese_words = JapaneseCorpus
+                     .where(id: ids_to_train_on)
+                     .includes(:corpus)
 
   puts "Found words to train on"
 

@@ -1,4 +1,6 @@
 class Phoneme < ActiveRecord::Base
+  @cache = {}
+
   has_many :intersections
   has_many :katakanas, :through => :intersections
   
@@ -20,6 +22,11 @@ class Phoneme < ActiveRecord::Base
     else
       prob 
     end
+  end
+
+  def self.find_by_phone_cached(phone)
+    @cache[phone] ||= find_by_phone(phone)
+    @cache[phone]
   end
 
 end

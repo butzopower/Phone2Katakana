@@ -20,8 +20,8 @@ class Intersection < ActiveRecord::Base
   end
 
   def self.find_or_create_intersection(phone, katakana)
-    p = Phoneme.find_by_phone(phone)
-    k = Katakana.find_by_phone(katakana)
+    p = Phoneme.find_by_phone_cached(phone)
+    k = Katakana.find_by_phone_cached(katakana)
     i = find_or_initialize_by(phoneme_id: p.id, katakana_id: k.id)
     i.times_matched = (i.times_matched || 0 ) + 1
     i.save
